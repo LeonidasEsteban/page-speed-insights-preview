@@ -14,7 +14,7 @@
     <header class="header">
       <div class="container">
         <figure class="logo">
-          <img src="images/logo.png" height="50" alt="Logo de http://leonidasesteban.com" />
+          <img class="lazy" data-src="images/logo.png" height="50" alt="Logo de http://leonidasesteban.com" />
         </figure>
         <nav class="menu">
           <ol>
@@ -36,7 +36,7 @@
         <h1>
           Hola! Soy <strong>Leonidas Esteban</strong> <br/> Desarrollador  <strong>Javascript</strong> con <br> pasión por la <strong>enseñanza</strong>
         </h1>
-        <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"> 
+        <img class="hero-image lazy" data-src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"> 
       </div>
     </section>
     <section id="portafolio" class="portfolio">
@@ -53,7 +53,7 @@
               de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
         </div>
         <figure class="project-imageContainer">
-          <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+          <img class="project-image lazy" width="500" data-src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
         </figure>
       </article>
       <article class="project">
@@ -67,7 +67,7 @@
                 de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
           </div>
           <figure class="project-imageContainer">
-            <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+            <img class="project-image lazy" width="500" data-src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
           </figure>
         </article>
       </div>
@@ -81,7 +81,7 @@
       <div class="container">
         <article class="event">
           <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg" width="500" />
+            <img class="event-image lazy" data-src="images/platzi-conf.jpg" width="500" />
           </figure>
           <div class="event-detail">
             <h3 class="event-title">PlatziConf México 2018</h3>
@@ -115,7 +115,7 @@
         </article>
         <article class="event">
           <figure class="event-imageContainer">
-            <img class="event-image" src="images/f9.jpg" width="500" />
+            <img class="event-image lazy" data-src="images/f9.jpg" width="500" />
           </figure>
           <div class="event-detail">
             <h3 class="event-title">PlatziConf México 2018</h3>
@@ -143,7 +143,7 @@
     <footer class="footer">
       <div class="container">
         <div>
-          <p>Curso de Desarrollo web online 2018 <img src="images/platzi.png" width="80" alt="platzi"></p>
+          <p>Curso de Desarrollo web online 2018 <img class="lazy" data-src="images/platzi.png" width="80" alt="platzi"></p>
         </div>
         <div>
           <p>
@@ -153,6 +153,12 @@
       </div>
     </footer>
     <link rel="stylesheet" href="css/estilos.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.19.0/dist/lazyload.min.js"></script>
+    <script>
+      const myLazyLoad = new LazyLoad({
+          elements_selector: ".lazy"
+      });
+    </script>
     <script src="js/app.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
   </body>
