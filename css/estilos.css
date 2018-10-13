@@ -418,6 +418,7 @@ figure {
   h1 {
     font-size: 2em;
     z-index: 2;
+    position: relative;
   }
 }
 
